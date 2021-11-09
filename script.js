@@ -34,10 +34,10 @@ function scriviNum(){
 }
 
 
-// ora devo stampare i numeri ,uguali a quelli che sono stati generati, che l'utente ha inserito 
+// ora devo stampare i numeri che l'utente ha inserito (solo quelli uguali)
  
     //se i numeri dell'array numUser sono uguali ai numeri dell'array arrayNum allora li pusho sull'array che stamperò alla fine
-        //confrontare il primo num inserito dall'utente con tutti quelli presenti nell'array di numeri random
-    // per confrontare tutti i numeri di un array con un altro ho bisogno di attraversare tutto l'array scritto dall'utente e confrontarlo poi 
+        //confrontare il primo num inserito dall'utente con tutti quelli presenti nell'array di numeri random arrayNum.includes(numUser[i])
+        //stampo al posto del div stampato in precedenza l'array che ho formato contenente i numeri uguali 
 
 
