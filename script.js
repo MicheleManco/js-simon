@@ -5,15 +5,9 @@
 
 let arrayNum = []
 const divNum = document.getElementById("numeri")
-const clock = setInterval(scriviNum, 3000);
+const clock = setTimeout(scriviNum, 30000);
 let numUser = [];
-
-function scriviNum(){
-    while (numUser.length < 5){
-        let numInseriti = prompt("inserisci i numeri che hai visto prima")
-        numUser.push(numInseriti)
-    }  
-}
+let numUguali = [];
 
 while (arrayNum.length < 5){
     let numbers = Math.floor(Math.random()*100 +1);
@@ -25,4 +19,25 @@ while (arrayNum.length < 5){
 console.log(arrayNum, numUser)
 
 divNum.innerHTML = `${arrayNum}`
+
+function scriviNum(){
+    while (numUser.length < 5){
+        let numInseriti = parseInt(prompt("inserisci i numeri che hai visto prima"));
+        numUser.push(numInseriti)
+    }  
+    for (let i = 0; i < arrayNum.length; i++){
+        if(arrayNum.includes(numUser[i])){
+            numUguali.push(numUser[i])
+        }
+    }
+    divNum.innerHTML = `${numUguali}`
+}
+
+
+// ora devo stampare i numeri ,uguali a quelli che sono stati generati, che l'utente ha inserito 
+ 
+    //se i numeri dell'array numUser sono uguali ai numeri dell'array arrayNum allora li pusho sull'array che stamperò alla fine
+        //confrontare il primo num inserito dall'utente con tutti quelli presenti nell'array di numeri random
+    // per confrontare tutti i numeri di un array con un altro ho bisogno di attraversare tutto l'array scritto dall'utente e confrontarlo poi 
+
 
